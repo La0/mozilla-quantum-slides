@@ -1,205 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>Firefox Quantum - Mozilla</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<style>
+		.slide.off::after {
+			visibility: hidden;
+		}
+		.blink {
+			animation: blink-animation 1s steps(2, start) infinite;
+			-webkit-animation: blink-animation 1s steps(2, start) infinite;
+		}
+		@keyframes blink-animation {
+			to {
+				visibility: hidden;
+			}
+		}
+		@-webkit-keyframes blink-animation {
+			to {
+				visibility: hidden;
+			}
+		}
+	</style>
 </head>
 <body class="shower list">
 
 	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
+		<h1>Firefox Quantum - Mozilla</h1>
+		<p>Bastien Abadie, Grenoble, 14/11/2017</p>
 	</header>
 
-	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
+	<section class="slide off" id="cover">
 		<figure>
-			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
+			<img class="cover" src="pictures/firefox.png" alt="Mozilla Fireofx Logo">
+			<figcaption >
+				<a href="http://fiftyfootshadows.net/">© Mozilla</a>
 			</figcaption>
 		</figure>
+		<h2>Firefox Quantum</h2>
+		<p>Release Party @ Coop Infolab - Grenoble</p>
 		<style>
+			#cover {
+			background-color: rgb(0, 96, 223);
+			background-image: linear-gradient(rgb(0, 96, 223) 0px, rgb(0, 156, 255) 50%, rgb(0, 171, 255) 100%);
+			color: rgb(255, 255, 255);
+			text-align:center;
+			text-shadow: 2px 2px 4px #000000;
+			}
+
 			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
+				color: white;
+				margin-top: 43%;
+				margin-bottom: 0;
+				font-size:64px;
 				}
 			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
+				color: #EEE;
 				font-size:20px;
 				}
-				#cover p a {
-					color:#FFF;
-					}
 		</style>
 	</section>
 
-	<section class="slide">
-		<h2>Shower key features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
-
-	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</section>
-
-	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-	</section>
-
-	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</section>
-
-	<section class="slide">
-		<h2>Serious citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-	<section class="slide">
-		<h2>Code samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</section>
-
-	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</section>
-
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<figure>
-			<img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
-		</figure>
+	<section class="slide" id="whoami">
+		<img src="pictures/me.jpg" class="cover w"/>
+		<div class="left">
+			<code>$ whoami<span class="blink">_</span></code>
+			<div class="next">Freelance DevOps @ <mark>NextCairn</mark></div>
+			<div class="next"><mark>Mozilla</mark> Release Management team</div>
+			<div class="next"><mark>La0</mark> on Github, Twitter...</div>
+		</div>
 		<style>
-			#picture h2 {
-				color:#FFF;
-				}
+		#whoami {
+			text-align: left;
+		}
+		#whoami div.left {
+			width: 50%;
+			margin-top: 15%;
+			color: white;
+
+		}
 		</style>
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
-	</section>
-
-	<section class="slide">
-		<h2>Inner navigation</h2>
+		<h2>Performances improvements</h2>
 		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
+			<li>2x faster</li>
+			<li>30% less memory than Chrome</li>
+			<li>Feels way faster</li>
+			<li>No more xul (?)</li>
 		</ol>
 	</section>
 
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
+	<section class="slide black off" id="mark">
+		<img src="pictures/mark_mayo.jpg" class="cover" alt="Mark Mayo" />
+		<div class="next overlay">
+			<h2>20 milliseconds at a time</h2>
+			<p>Mark Mayo - VP Firefox</p>
+		</div>
+		<style>
+			#mark {
+				padding: 1px;
+				text-align: center;
+			}
+			#mark .overlay {
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.7);
+			}
+			#mark h2 {
+				padding-top: 20%;
+				color: white;
+				font-size: 100px;
+			}
+			#mark h2::before {
+				position: absolute;
+				top: 28%;
+				left: 0%;
+				color: rgba(200, 200, 200, 0.6);
+				font-size: 180px;
+				content: '\201C';
+			}
+			#mark p{
+				color: #EEE;
+			}
+		</style>
 	</section>
 
-	<section class="slide" id="see-more">
+	<section class="slide">
+		<h2>Speed improvements</h2>
+		<ol>
+			<li>Electrolysis</li>
+			<li>Rust / Servo</li>
+			<li>Tabs startup</li>
+			<li>Faster release cycle</li>
+			<li>Nightly</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Feature: Pocket</h2>
+		<ol>
+			<li>Save bookmarks (duh)</li>
+			<li>Share settings/tabs/downloads/passwords across devices</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Feature: New tab</h2>
+		screenshots
+	</section>
+
+	<section class="slide">
+		<h2>Feature: Sleek new design</h2>
+		screenshots
+	</section>
+
+	<section class="slide">
+		<h2>Feature: Privacy</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Feature: New extension system</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Future Feature: Tab containers</h2>
+	</section>
+
+<!-- 2 slides on Mozilla + values at the end-->
+	<section class="slide">
+		<img src="pictures/mozilla.png" alt="Mozilla" style="width: 200px; "/>
+<a href="https://www.mozilla.org/en-US/about/manifesto/">Manifesto</a>
+PIctures : https://flic.kr/g/vJ772
+		<ol>
+			<li>Great company</li>
+			<li>Great values</li>
+			<li>Great developers</li>
+			<li>Great managers</li>
+		</ol>
+		<p class="note">Come work with us for the open web</p>
+	</section>
+
+	<section class="slide" id="questions">
 		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
+			<img src="pictures/firefox.png" alt="Shower logo">
+			<mark>Questions ?</mark>
 		</h2>
 		<style>
-			#see-more h2 {
-				font-size:100px
+			#questions h2 {
+				font-size:140px
 				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
+			#questions img {
+				width: 1em;
+				height: 1em;
 				}
 		</style>
 	</section>
 
 	<footer class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		<a href="https://mozilla.org/firefox">Get Firefox !</a:>
 	</footer>
 
 	<div class="progress"></div>
 
 	<script src="shower/shower.min.js"></script>
-	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
-
 </body>
 </html>
