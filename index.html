@@ -8,6 +8,14 @@
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
 	<link rel="icon" type="image/png" sizes="196x196" href="pictures/favicon.png">
 	<style>
+		@font-face {
+			font-family: 'FiraSans';
+			src: url('fonts/FiraSans-Regular.woff2') format('woff2'),
+					 url('fonts/FiraSans-Regular.woff') format('woff');
+		}
+		.slide h2 {
+			font-family: "FiraSans" !important;
+		}
 		.slide.off::after {
 			visibility: hidden;
 		}
@@ -81,25 +89,49 @@
 			width: 50%;
 			margin-top: 15%;
 			color: white;
-
 		}
 		</style>
 	</section>
 
 	<section class="slide">
-		<h2>Performances improvements</h2>
-		<ol>
-			<li>2x faster</li>
-			<li>30% less memory than Chrome</li>
-			<li>Feels way faster</li>
-			<li>No more xul (?)</li>
-		</ol>
+		<h2>Press coverage</h2>
+		<img src="pictures/press_01.png" />
+		<p>
+			By <a href="https://www.digitaltrends.com/web/firefox-quantum-hands-on-review/">
+				Digital Trends
+			</a>
+		</p>
+
+		<img src="pictures/press_02.png" />
+		<p>
+			By <a href="https://thenextweb.com/tech/2017/09/26/mozillas-firefox-quantum-browser-is-ridiculously-fast/">
+				The next web
+			</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/press_03.png" />
+		<p>
+			By <a href="https://arstechnica.com/gadgets/2017/09/firefox-takes-a-quantum-leap-forward-with-new-developer-edition/">
+				Ars Technica
+			</a>
+		</p>
+
+		<blockquote>Firefox Quantum is pure win.</blockquote>
+		<blockquote>Firefox has definitely been getting better over the past year or two.</blockquote>
+		<blockquote>I switched to the beta a couple of months ago, and it's just better than Chrome in every way. </blockquote>
+		<p>
+			Users comments on <a href="https://news.ycombinator.com/item?id=15651262">
+				Hacker News
+			</a>. And they're a hard bunch.
+		</p>
 	</section>
 
 	<section class="slide black off" id="mark">
 		<img src="pictures/mark_mayo.jpg" class="cover" alt="Mark Mayo" />
 		<div class="next overlay">
-			<h2>20 milliseconds at a time</h2>
+			<h2>20 milliseconds<br />at a time</h2>
 			<p>Mark Mayo - VP Firefox</p>
 		</div>
 		<style>
@@ -121,6 +153,7 @@
 				position: absolute;
 				top: 28%;
 				left: 0%;
+				font-family: "PT Sans", sans-serif;
 				color: rgba(200, 200, 200, 0.6);
 				font-size: 180px;
 				content: '\201C';
@@ -132,14 +165,42 @@
 	</section>
 
 	<section class="slide">
-		<h2>Speed improvements</h2>
+		<h2>Performances improvements</h2>
+		<div class="double">
+			<ul>
+				<li><strong>2x faster</strong> than Firefox 52</li>
+				<li><strong>30% less memory</strong> than Chrome</li>
+				<li><em>Feels</em> way faster</li>
+			</ul>
+			<img src="pictures/memory_usage.png" style="width: 120%";>
+		</div>
+	</section>
+
+	<section class="slide off">
+		<img src="pictures/1961_tabs.png" class="cover">
+	</section>
+
+
+	<section class="slide">
+		<h2>How we did it</h2>
 		<ol>
-			<li>Electrolysis</li>
-			<li>Rust / Servo</li>
-			<li>Tabs startup</li>
-			<li>Faster release cycle</li>
-			<li>Nightly</li>
+			<li>Electrolysis (since release 54 aka last year)</li>
+			<li class="next">Parallelization + GPU offload</li>
+			<li class="next">Rust &rarr; Servo &rarr; Stylo</li>
+			<li class="next">Tabs startup</li>
+			<li class="next">No more XUL</li>
+			<li class="next">Faster release cycle</li>
+			<li class="next">More people on Nightly</li>
 		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Security improvements</h2>
+		<ol>
+			<li>Filesystem access limited on Linux</li>
+			<li>Only webextensions</li>
+		</ol>
+https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox/#firefox57
 	</section>
 
 	<section class="slide">
@@ -151,13 +212,34 @@
 	</section>
 
 	<section class="slide">
+		<h2>Feature: WebExetnsions</h2>
+Common technologies (HTML/CSS/JS) + specific APIs
+Cross browser
+Multi threaded
+More secure
+https://support.mozilla.org/fr/kb/modernisation-technologie-modules-firefox
+https://developer.mozilla.org/fr/Add-ons/WebExtensions
+	</section>
+
+	<section class="slide">
+		<video class="cover" muted="" controls="" playsinline="" poster="pictures/nightly.png">
+			<source src="videos/screenshots.webm" type="video/webm">
+			<img src="pictures/nightly.png" alt="">
+		</video>
+	</section>
+
+	<section class="slide">
 		<h2>Feature: New tab</h2>
 		screenshots
 	</section>
 
 	<section class="slide">
 		<h2>Feature: Sleek new design</h2>
-		screenshots
+		<img src="pictures/photon.png" style="width:100%"/>
+Photon: http://design.firefox.com/photon/welcome.html
+Guidelines
+
+For devtools too : https://hacks.mozilla.org/2017/09/developer-edition-devtools-update-now-with-photon-ui/
 	</section>
 
 	<section class="slide">
@@ -186,20 +268,43 @@ PIctures : https://flic.kr/g/vJ772
 		<p class="note">Come work with us for the open web</p>
 	</section>
 
-	<section class="slide" id="questions">
-		<h2 class="shout">
-			<img src="pictures/firefox.png" alt="Shower logo">
-			<mark>Questions ?</mark>
-		</h2>
+	<section class="slide">
+		Links
+
+	release notes : https://www-dev.allizom.org/en-US/firefox/57.0/releasenotes/#
+	</section>
+
+
+	<section class="slide off" id="questions">
+		<h2 class="">Questions ?</h2>
+		<div class="foxes">
+			<img src="pictures/firefox.png" />
+			<img src="pictures/nightly.png" />
+			<img src="pictures/focus.png" />
+		</div>
 		<style>
+			#questions {
+				text-align: center;
+			}
 			#questions h2 {
 				font-size:140px
 				}
 			#questions img {
-				width: 1em;
-				height: 1em;
+				width: 25%;
 				}
 		</style>
+	</section>
+
+	<section class="slide">
+		Links
+
+	release notes : https://www-dev.allizom.org/en-US/firefox/57.0/releasenotes/#
+
+Perfs : https://blog.mozilla.org/firefox/quantum-performance-test/
+Test 52 : https://mozilla.github.io/arewefastyet-speedometer/2.0/
+Quantum plan : https://medium.com/mozilla-tech/a-quantum-leap-for-the-web-a3b7174b3c12
+Quantum wiki : https://wiki.mozilla.org/Quantum
+1691 Tabs: https://metafluff.com/2017/07/21/i-am-a-tab-hoarder/
 	</section>
 
 	<footer class="badge">
