@@ -13,6 +13,9 @@
 			src: url('fonts/FiraSans-Regular.woff2') format('woff2'),
 					 url('fonts/FiraSans-Regular.woff') format('woff');
 		}
+		strike {
+			color: #888
+		}
 		.slide h2 {
 			font-family: "FiraSans" !important;
 		}
@@ -91,6 +94,21 @@
 			color: white;
 		}
 		</style>
+	</section>
+
+	<section class="slide">
+		<h2>What's new ?</h2>
+
+		<div class="double">
+			<div class="next">
+				<img src="pictures/fast.gif" style="width:100%" />
+				<h4>It's fast...</h4>
+			</div>
+			<div class="next">
+				<img src="pictures/beautiful.gif" style="width:100%" />
+				<h4 style="text-align: right">and beautiful.</h4>
+			</div>
+		</div>
 	</section>
 
 	<section class="slide">
@@ -185,14 +203,16 @@
 		<h2>How we did it</h2>
 		<ol>
 			<li>Electrolysis (since release 54 aka last year)</li>
-			<li class="next">Parallelization + GPU offload</li>
+			<li class="next">Parallelization + <strike>GPU offload</strike></li>
 			<li class="next">Rust &rarr; Servo &rarr; Stylo</li>
 			<li class="next">Tabs startup</li>
 			<li class="next">No more XUL</li>
 			<li class="next">Faster release cycle</li>
-			<li class="next">More people on Nightly</li>
+			<li class="next">More people on Nightly <strike>Aurora</strike></li>
 		</ol>
 	</section>
+
+<!--
 
 	<section class="slide">
 		<h2>Security improvements</h2>
@@ -202,6 +222,7 @@
 		</ol>
 https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox/#firefox57
 	</section>
+-->
 
 	<section class="slide">
 		<h2>Feature: Pocket</h2>
@@ -212,7 +233,7 @@ https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox/#firefox57
 	</section>
 
 	<section class="slide">
-		<h2>Feature: WebExetnsions</h2>
+		<h2>Feature: WebExtensions</h2>
 Common technologies (HTML/CSS/JS) + specific APIs
 Cross browser
 Multi threaded
@@ -247,17 +268,12 @@ For devtools too : https://hacks.mozilla.org/2017/09/developer-edition-devtools-
 	</section>
 
 	<section class="slide">
-		<h2>Feature: New extension system</h2>
-	</section>
-
-	<section class="slide">
 		<h2>Future Feature: Tab containers</h2>
 	</section>
 
 <!-- 2 slides on Mozilla + values at the end-->
 	<section class="slide">
 		<img src="pictures/mozilla.png" alt="Mozilla" style="width: 200px; "/>
-<a href="https://www.mozilla.org/en-US/about/manifesto/">Manifesto</a>
 PIctures : https://flic.kr/g/vJ772
 		<ol>
 			<li>Great company</li>
@@ -267,13 +283,6 @@ PIctures : https://flic.kr/g/vJ772
 		</ol>
 		<p class="note">Come work with us for the open web</p>
 	</section>
-
-	<section class="slide">
-		Links
-
-	release notes : https://www-dev.allizom.org/en-US/firefox/57.0/releasenotes/#
-	</section>
-
 
 	<section class="slide off" id="questions">
 		<h2 class="">Questions ?</h2>
@@ -296,15 +305,49 @@ PIctures : https://flic.kr/g/vJ772
 	</section>
 
 	<section class="slide">
-		Links
+		<h2>Links used in this talk</h2>
 
-	release notes : https://www-dev.allizom.org/en-US/firefox/57.0/releasenotes/#
+		<div class="double">
+			<ul>
 
-Perfs : https://blog.mozilla.org/firefox/quantum-performance-test/
-Test 52 : https://mozilla.github.io/arewefastyet-speedometer/2.0/
-Quantum plan : https://medium.com/mozilla-tech/a-quantum-leap-for-the-web-a3b7174b3c12
-Quantum wiki : https://wiki.mozilla.org/Quantum
-1691 Tabs: https://metafluff.com/2017/07/21/i-am-a-tab-hoarder/
+				<li>
+					<a href="https://www-dev.allizom.org/en-US/firefox/57.0/releasenotes/#">
+						Release Notes
+					</a>
+				</li>
+				<li>
+					<a href="https://blog.mozilla.org/firefox/quantum-performance-test/">
+						Performance test blog post
+					</a>
+				</li>
+				<li>
+					<a href="https://mozilla.github.io/arewefastyet-speedometer/2.0/">
+						Speedometer test
+					</a>
+				</li>
+				<li>
+					<a href="https://medium.com/mozilla-tech/a-quantum-leap-for-the-web-a3b7174b3c12">
+						The Quantum plan annoucement
+					</a>
+				</li>
+				<li>
+					<a href="https://wiki.mozilla.org/Quantum">
+						Quantum wiki
+					</a>
+				</li>
+				<li>
+					<a href="https://metafluff.com/2017/07/21/i-am-a-tab-hoarder/">
+						1691 Tabs
+					</a>
+				</li>
+				<li>
+					<a href="https://www.mozilla.org/en-US/about/manifesto/">
+						Mozilla Manifesto
+					</a>
+				</li>
+			</ul>
+
+		</div>
 	</section>
 
 	<footer class="badge">
