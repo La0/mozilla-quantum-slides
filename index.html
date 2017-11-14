@@ -16,6 +16,9 @@
 		strike {
 			color: #888
 		}
+		.double img.full {
+			width: 100%;
+		}
 		.slide h2 {
 			font-family: "FiraSans" !important;
 		}
@@ -201,15 +204,19 @@
 
 	<section class="slide">
 		<h2>How we did it</h2>
-		<ol>
-			<li>Electrolysis (since release 54 aka last year)</li>
-			<li class="next">Parallelization + <strike>GPU offload</strike></li>
-			<li class="next">Rust &rarr; Servo &rarr; Stylo</li>
-			<li class="next">Tabs startup</li>
-			<li class="next">No more XUL</li>
-			<li class="next">Faster release cycle</li>
-			<li class="next">More people on Nightly <strike>Aurora</strike></li>
-		</ol>
+		<div class="double">
+			<ol>
+				<li>Electrolysis <mark>54</mark></li>
+				<li class="next">Parallelization + GPU offload <mark>58</mark></li>
+				<li class="next">Rust &rarr; Servo &rarr; Stylo</li>
+				<li class="next">Quantum compositor</li>
+				<li class="next">Quantum render</li>
+				<li class="next">Quantum flow</li>
+				<li class="next">Faster release cycle <strike>Aurora</strike></li>
+				<li class="next">No more XUL</li>
+			</ol>
+			<img src="pictures/threads.png" class="full" />
+		</div>
 	</section>
 
 <!--
@@ -374,6 +381,11 @@ TODO: accounts + sync + import
 				<li>
 					<a href="https://hacks.mozilla.org/2017/09/developer-edition-devtools-update-now-with-photon-ui/">
 						New devtools look
+					</a>
+				</li>
+				<li>
+					<a href="https://hacks.mozilla.org/2017/11/entering-the-quantum-era-how-firefox-got-fast-again-and-where-its-going-to-get-faster/">
+						How Firefox got fast again
 					</a>
 				</li>
 			</ul>
