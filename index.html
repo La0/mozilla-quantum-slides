@@ -207,29 +207,34 @@
 		<div class="double">
 			<ol>
 				<li>Electrolysis <mark>54</mark></li>
-				<li class="next">Parallelization + GPU offload <mark>58</mark></li>
-				<li class="next">Rust &rarr; Servo &rarr; Stylo</li>
-				<li class="next">Quantum compositor</li>
-				<li class="next">Quantum render</li>
-				<li class="next">Quantum flow</li>
+				<li class="next">Quantum Compositor</li>
+				<li class="next">Quantum DOM</li>
+				<li class="next">Quantum CSS : <strong>Stylo</strong></li>
+				<li class="next">Quantum Render (GPU <mark>58</mark>)</li>
+				<li class="next">Quantum Flow</li>
 				<li class="next">Faster release cycle <strike>Aurora</strike></li>
 				<li class="next">No more XUL</li>
 			</ol>
+			<img src="pictures/engine.png" class="full" style="margin-top: -60px"/>
+			<hr />
 			<img src="pictures/threads.png" class="full" />
 		</div>
 	</section>
 
-<!--
-
 	<section class="slide">
-		<h2>Security improvements</h2>
-		<ol>
-			<li>Filesystem access limited on Linux</li>
-			<li>Only webextensions</li>
-		</ol>
-https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox/#firefox57
+		<h2>A zoom inside Servo</h2>
+		<div class="double">
+			<h4>Steps to render css</h4>
+			<ol>
+				<li>Parse DOM+CSS</li>
+				<li>Apply rules on each DOM node</li>
+				<li>Calc dimensions</li>
+				<li>Paint boxes</li>
+				<li>Render boxes as final image</li>
+			</ol>
+			<img class="next full" src="pictures/servo.png" />
+		</div>
 	</section>
--->
 
 	<section class="slide">
 		<h2>Feature: Synchronisation</h2>
@@ -286,10 +291,6 @@ https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox/#firefox57
 	</section>
 
 	<section class="slide">
-		<h2>Feature: Privacy</h2>
-	</section>
-
-	<section class="slide">
 		<h2>Feature: Container Tabs <mark>58+</mark></h2>
 		<img src="pictures/containers.jpg" style="width: 100%" />
 	</section>
@@ -302,6 +303,10 @@ https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox/#firefox57
 
 		}
 		</style>
+	</section>
+
+	<section class="slide off">
+		<iframe class="cover" width="100%" height="100%" src="https://www.youtube.com/embed/n6wiRyKkmKc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 	</section>
 
 	<section class="slide off" id="questions">
@@ -388,6 +393,11 @@ https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox/#firefox57
 				<li>
 					<a href="https://hacks.mozilla.org/2017/11/entering-the-quantum-era-how-firefox-got-fast-again-and-where-its-going-to-get-faster/">
 						How Firefox got fast again
+					</a>
+				</li>
+				<li>
+					<a href="https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/">
+						Inside Servo
 					</a>
 				</li>
 			</ul>
